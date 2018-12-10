@@ -9,6 +9,7 @@
 | Designer | 陈嘉劲 |
 | Developer | 陈嘉劲 |
 | QA | 陈嘉劲 |
+| API | 百度语音识别API | 
 
 ## 产品定位
 * 智能热水器智能调节
