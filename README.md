@@ -57,7 +57,7 @@
 * 当前水温有点冷/热，根据预先设置，进行语音输入时说出让水温变热/冷一点的指示，水温将按照预设的数值上升/下降温度
 
 ## 核心价值
-* 用户使用语音输入代替手动调节热冷水开关即可对热水器进行控制
+* 用户使用语音输入发送指令代替手动调节热冷水开关即可对热水器进行控制
 
 ## 出错原因/人工智能的概率性
 * 导致用户在发出语音指令时没有执行的原因有
@@ -73,8 +73,59 @@
 
 ## 产品原型
 
+### 首页
 
+![首页](https://github.com/a774032767/API_AI_ML/blob/master/image/%E9%A6%96%E9%A1%B5.png)
+
+### 连接
+
+![连接](https://github.com/a774032767/API_AI_ML/blob/master/image/%E8%BF%9E%E6%8E%A5.png)
+
+### 设置
+
+![设置](https://github.com/a774032767/API_AI_ML/blob/master/image/%E8%AE%BE%E7%BD%AE.png)
 
   
 
+## API 产品使用关键AI或机器学习之API的输出入展示
 
+
+### 代码试例
+
+* 代码试例1
+
+```
+from aip import AipSpeech
+
+APP_ID = '15180100'
+API_KEY = '4Lls6ixvcoB7lmacnLNKmH8f'
+SECRET_KEY = 'LBlvF01tGMU6Bir2Vb4wjUXBwZCDXyws'
+
+client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
+
+# 读取文件
+def get_file_content(filePath):
+    with open(filePath, 'rb') as fp:
+        return fp.read()
+
+# 识别本地文件
+client.asr(get_file_content('代码试例1.pcm'), 'pcm', 16000, {
+    'dev_pid': 1536,
+})
+
+
+```
+* 试例1结果
+
+```
+{
+    "err_no": 0,
+    "err_msg": "success.",
+    "corpus_no": "15984125203285346378",
+    "sn": "235C524F-23TR-562F-73DR-9157WOMR2A2H",
+    "result": ["开启热水器"]
+}
+```
+
+## 相关文档
+* [产品原型](https://a774032767.github.io/API_AI_ML_app/index.html)
