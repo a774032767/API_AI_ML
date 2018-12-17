@@ -91,9 +91,9 @@
 ## API 产品使用关键AI或机器学习之API的输出入展示
 
 
-### 代码试例
+### 代码示例
 
-* 代码试例1
+* 代码示例1
 
 ```
 from aip import AipSpeech
@@ -110,13 +110,13 @@ def get_file_content(filePath):
         return fp.read()
 
 # 识别本地文件
-client.asr(get_file_content('代码试例1.pcm'), 'pcm', 16000, {
+client.asr(get_file_content('代码示例1.pcm'), 'pcm', 16000, {
     'dev_pid': 1536,
 })
 
 
 ```
-* 试例1结果
+* 示例1结果
 
 ```
 {
